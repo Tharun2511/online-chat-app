@@ -1,10 +1,8 @@
 import { Avatar } from "@chakra-ui/avatar";
 import { Box, Text } from "@chakra-ui/layout";
-import { ChatState } from "../../Context/ChatProvider";
 
-const UserListItem = ({ handleFunction }) => {
+const UserListItem = ({ user, handleFunction }) => {
 
-  const {user} = ChatState();
   return (
     <Box
       onClick={handleFunction}
@@ -31,7 +29,7 @@ const UserListItem = ({ handleFunction }) => {
         src={user.pic}
       />
       <Box>
-        <Text{user.name}</Text>
+        <Text>{user.name}</Text>
         <Text fontSize="xs">
           <b>Email : </b>
           {user.email}
