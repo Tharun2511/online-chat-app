@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js",
-    "build": "npm run build --prefix frontend --legacy-peer-deps --output public"
+    "build": "npm install --legacy-peer-deps && npm install --prefix frontend --legacy-peer-deps && npm run build --prefix frontend --legacy-peer-deps --output public"
   },
   "keywords": [
     "mern",
